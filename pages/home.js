@@ -30,7 +30,7 @@ export default function HomePage({navigation}){
                 <TouchableWithoutFeedback onPress={()=> navigation.navigate("productdetail")} key={index}>
                     <View style={[styles.product, {marginRight: (index+1)%2 === 0 ? 0 : 10}]}>
                         <Image source={product} style={{width: "100%", height: 220}} />
-                        <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingVertical: 5}}>
+                        <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 5}}>
                             <View style={{flexDirection: "row", alignItems: "center"}}>
                                 <Text style={styles.originalPrice}>&cent;25.00</Text>
                                 <Text style={styles.price}>&cent;15.00</Text>
