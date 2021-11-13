@@ -1,13 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LandingPage from './pages/landing';
+import HomePage from './pages/home';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen
+          name="landingpage"
+          component={LandingPage}
+        />
+        <Stack.Screen
+          name="homepage"
+          component={HomePage}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
