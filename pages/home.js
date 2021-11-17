@@ -36,7 +36,9 @@ export default function HomePage({navigation}){
             <Ionicons name="ios-search" size={25} />
             <Ionicons name="ios-cart-outline" size={25} />
             <Ionicons name="ios-heart-outline" size={25} />
-            <Ionicons name="ios-person-circle-outline" size={25} />
+            <TouchableWithoutFeedback onPress={()=>navigation.navigate("login")}>
+                <Ionicons name="ios-person-circle-outline" size={25} />
+            </TouchableWithoutFeedback>
         </View>
     </View>
 }
